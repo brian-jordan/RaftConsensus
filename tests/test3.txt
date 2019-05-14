@@ -1,0 +1,10 @@
+# You must set this variable to the number of servers in your test case
+NUM_SERVERS=5
+
+# Test assumes the following .config values for ELECTION_TIMEOUT_OVERRIDE:
+# S1 (1200), S2 (300), S3 (300), S4 (1200), S5 (1200)
+
+start_servers $NUM_SERVERS
+
+# wait for S2 or S3 to become leader
+sleep 1

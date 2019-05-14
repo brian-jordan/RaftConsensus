@@ -1,0 +1,1571 @@
+
+TIME_TO_SIMULATE=10
+Error parsing /Users/brianjordan/Documents/Duke-Classes/Junior-Spring/CompSci-310/Projects/Project1/compsci310-spring19-group58/p3/bin/../serverlogs/1.config.4: #ELECTION_TIMEOUT_OVERRIDE
+Error parsing /Users/brianjordan/Documents/Duke-Classes/Junior-Spring/CompSci-310/Projects/Project1/compsci310-spring19-group58/p3/bin/../serverlogs/2.config.4: #ELECTION_TIMEOUT_OVERRIDE
+Error parsing /Users/brianjordan/Documents/Duke-Classes/Junior-Spring/CompSci-310/Projects/Project1/compsci310-spring19-group58/p3/bin/../serverlogs/3.config.4: #ELECTION_TIMEOUT_OVERRIDE
+S1.1: Log { (1 1)  (1 2) }
+S2.1: Log { (1 1)  (1 2)  (1 3) }
+S3.3: Log { (1 1)  (1 2)  (2 3)  (2 4) }
+S1.1: switched to follower mode.
+F: S1.1: switched to follower mode.
+S2.1: switched to follower mode.
+F: S2.1: switched to follower mode.
+F: time 210
+F: time 253
+S3.3: switched to follower mode.
+F: S3.3: switched to follower mode.
+F: time 186
+F: S3.3timeout, switching to candidate mode
+S3.4: switched to candidate mode.
+C: S3.4: go switched to candidate mode.
+C: time 151
+F: S1.1timeout, switching to candidate mode
+C: S3.4 is requesting vote from S1
+C: S3.4 is requesting vote from S2
+S1.2: switched to candidate mode.
+C: S1.2: go switched to candidate mode.
+C: time 233
+C: S1.2 is requesting vote from S2
+C: S1.2 is requesting vote from S3
+C: S1.2: requestVote, received vote request from S3.
+C: S1.2requestVote, revert to follower mode
+S1.2: switched to follower mode.
+F: S1.2: switched to follower mode.
+F: time 235
+F: S1.2: go, received vote request from S3.
+F: S1.2: voted for S3.
+F: S2.1: go, received vote request from S3.
+F: S2.1: voted for S3.
+F: S2.4: go, received vote request from S1.
+F: S2.4: voted against S1.
+F: S2.4timeout, switching to candidate mode
+S2.5: switched to candidate mode.
+C: S2.5: go switched to candidate mode.
+C: S3.4: requestVote, received vote request from S1.
+C: time 160
+C: S2.5 is requesting vote from S1
+C: S2.5 is requesting vote from S3
+C: S3.4: requestVote, deny vote from S1.2
+C: S3.4: timeout, current votes: [-1, 0, 0, -1]
+C: S3.4timeout,  wins election!
+S3.4: switched to leader mode.
+L: S3.4: switched to leader mode.
+F: S1.4: go, received vote request from S2.
+F: S1.4: voted for S2.
+L: S3.4: reverted to follower mode
+S3.5: switched to follower mode.
+F: S3.5: switched to follower mode.
+F: time 236
+F: S3.5: go, received vote request from S2.
+F: S3.5: voted against S2.
+F: S1.5: received  append request from S3.4-PrevLogTerm:2-PrevLogIndex:3
+F: S1.5 ignored append RPC
+C: S2.5: timeout, current votes: [-1, 0, -1, 5]
+C: S2.5: timeout, someone is ahead switching to follower 
+S2.5: switched to follower mode.
+F: S2.5: switched to follower mode.
+F: time 264
+F: S1.5timeout, switching to candidate mode
+S1.6: switched to candidate mode.
+C: S1.6: go switched to candidate mode.
+C: time 242
+C: S1.6 is requesting vote from S2
+C: S1.6 is requesting vote from S3
+F: S3.5: go, received vote request from S1.F: S2.5: go, received vote request from S1.
+F: S3.5: voted against S1.
+
+F: S2.5: voted against S1.
+F: S3.6timeout, switching to candidate mode
+S3.7: switched to candidate mode.
+C: S3.7: go switched to candidate mode.
+C: time 272
+C: S3.7 is requesting vote from S1
+C: S3.7 is requesting vote from S2
+C: S1.6: requestVote, received vote request from S3.
+C: S1.6requestVote, revert to follower mode
+S1.6: switched to follower mode.F: S2.6: go, received vote request from S3.
+
+F: S1.6: switched to follower mode.
+F: S2.6: voted for S3.F: time 273
+
+F: S1.6: go, received vote request from S3.
+F: S1.6: voted for S3.
+C: S3.7: timeout, current votes: [-1, 0, 0, -1]
+C: S3.7timeout,  wins election!
+S3.7: switched to leader mode.
+F: S2.7timeout, switching to candidate modeL: S3.7: switched to leader mode.
+
+S2.8: switched to candidate mode.
+C: S2.8: go switched to candidate mode.
+C: time 150
+C: S2.8 is requesting vote from S1
+C: S2.8 is requesting vote from S3
+F: S1.7: received  append request from S3.7-PrevLogTerm:2-PrevLogIndex:3
+F: time 182
+L: S3.7: reverted to follower mode
+S3.8: switched to follower mode.
+F: S3.8: switched to follower mode.
+F: time 260
+F: S3.8: go, received vote request from S2.
+F: S3.8: voted against S2.
+F: S1.7 rejected append from S3.7
+F: S1.7: go, received vote request from S2.
+F: S1.7: voted for S2.
+C: S2.8: timeout, current votes: [-1, 0, -1, 8]
+C: S2.8: timeout, someone is ahead switching to follower 
+S2.8: switched to follower mode.
+F: S2.8: switched to follower mode.
+F: time 252
+F: S1.8timeout, switching to candidate mode
+S1.9: switched to candidate mode.
+C: S1.9: go switched to candidate mode.
+C: time 290
+C: S1.9 is requesting vote from S2
+C: S1.9 is requesting vote from S3
+F: S2.8: go, received vote request from S1.
+F: S2.8: voted against S1.
+C: S1.9: timeout, current votes: [-1, -1, 8, -1]
+F: S2.9timeout, switching to candidate mode
+S2.10: switched to candidate mode.
+C: S2.10: go switched to candidate mode.
+C: time 153
+C: S2.10 is requesting vote from S1
+C: S2.10 is requesting vote from S3
+C: S1.9: requestVote, received vote request from S2.
+C: S1.9requestVote, revert to follower mode
+S1.9: switched to follower mode.
+F: S1.9: switched to follower mode.
+F: time 256
+F: S1.9: go, received vote request from S2.
+F: S1.9: voted for S2.
+C: S2.10: timeout, current votes: [-1, 0, -1, -1]
+C: S2.10timeout,  wins election!
+S2.10: switched to leader mode.
+L: S2.10: switched to leader mode.
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 241
+F: S1.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 157
+F: S1.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 280
+F: S1.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 202
+F: S1.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 158
+F: S1.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 228
+F: S1.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 232
+F: S1.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 154
+F: S1.10 rejected append from S2.10
+F: S3.8timeout, switching to candidate mode
+S3.9: switched to candidate mode.
+C: S3.9: go switched to candidate mode.
+C: time 192
+C: S3.9 is requesting vote from S1
+C: S3.9 is requesting vote from S2
+S3.9: switched to follower mode.
+F: S3.9: switched to follower mode.
+F: time 243
+F: S1.10: go, received vote request from S3.
+F: S1.10: voted against S3.
+F: S3.9: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 250
+F: S3.10updated term to 10
+F: S3.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 171L: S2.10timeout, index of last entry2
+
+F: S3.10 rejected append from S2.10L: S2.10timeout, index of last entry2
+
+F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 299
+F: S3.10 rejected append from S2.10
+F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 229
+F: S3.10 rejected append from S2.10
+F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 246
+F: S3.10 rejected append from S2.10
+F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 235
+F: S3.10 rejected append from S2.10
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 260
+F: S3.10: go, received vote request from S2.
+F: S3.10: voted against S2.
+F: S3.10: go, received vote request from S1.
+F: S3.10: voted against S1.
+F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 216F: S1.10 rejected append from S2.10
+
+F: S3.10 rejected append from S2.10
+F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 235
+F: S3.10 rejected append from S2.10
+F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 283
+F: S3.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 221
+F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2F: S1.10 rejected append from S2.10
+
+F: time 177
+F: S3.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+
+F: time 286F: time 189
+
+F: S3.10 rejected append from S2.10F: S1.10 rejected append from S2.10
+
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+
+F: time 247F: time 193
+
+F: S1.10 rejected append from S2.10F: S3.10 rejected append from S2.10
+
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 205F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 240
+
+F: S1.10 rejected append from S2.10
+F: S3.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 254
+F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 236
+F: S1.10 rejected append from S2.10
+F: S3.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 282F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 166
+
+F: S3.10 rejected append from S2.10
+F: S1.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 161
+F: S1.10 rejected append from S2.10
+F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 285
+F: S3.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 175F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: time 183
+
+F: S1.10 rejected append from S2.10F: S3.10 rejected append from S2.10
+
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+
+F: time 215F: time 198
+
+F: S3.10 rejected append from S2.10F: S1.10 rejected append from S2.10
+
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+
+F: time 294F: time 192
+
+F: S1.10 rejected append from S2.10
+F: S3.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+
+F: time 181F: time 187
+
+F: S3.10 rejected append from S2.10
+F: S1.10 rejected append from S2.10
+L: S2.10timeout, current entries [1 1, 1 2, 1 3]
+L: S2.10timeout, index of last entry2
+L: S2.10timeout, index of last entry2
+F: S1.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2
+F: S3.10: received  append request from S2.10-PrevLogTerm:1-PrevLogIndex:2F: time 215
+F: time 163
+
+F: S1.10 rejected append from S2.10
+F: S3.10 rejected append from S2.10
+F: S3.10timeout, switching to candidate mode
+S3.11: switched to candidate mode.
+C: S3.11: go switched to candidate mode.
+C: time 269
+C: S3.11 is requesting vote from S1
+C: S3.11 is requesting vote from S2
+F: S1.10: go, received vote request from S3.
+F: S1.10: voted for S3.
+F: S1.11timeout, switching to candidate mode
+S1.12: switched to candidate mode.
+C: S1.12: go switched to candidate mode.
+C: time 194
+C: S1.12 is requesting vote from S2
+C: S1.12 is requesting vote from S3
+C: S3.11: requestVote, received vote request from S1.
+C: S3.11requestVote, revert to follower mode
+S3.11: switched to follower mode.
+F: S3.11: switched to follower mode.
+F: time 280
+F: S3.11: go, received vote request from S1.
+F: S3.11: voted against S1.
+C: S1.12: timeout, current votes: [-1, -1, -1, 11]
+C: S1.12: timeout, current votes: [-1, -1, -1, 11]
+C: S1.12timeout,  didn't win... reverting back to candidate!
+S1.13: switched to candidate mode.
+C: S1.13: go switched to candidate mode.
+C: time 158
+C: S1.13 is requesting vote from S2
+C: S1.13 is requesting vote from S3
+F: S3.12: go, received vote request from S1.
+F: S3.12: voted against S1.
+C: S1.13: timeout, current votes: [-1, -1, -1, 12]
+F: S3.13timeout, switching to candidate mode
+S3.14: switched to candidate mode.
+C: S3.14: go switched to candidate mode.
+C: time 243
+C: S3.14 is requesting vote from S1
+C: S3.14 is requesting vote from S2
+C: S1.13: requestVote, received vote request from S3.
+C: S1.13requestVote, revert to follower mode
+S1.13: switched to follower mode.
+F: S1.13: switched to follower mode.
+F: time 240
+F: S1.13: go, received vote request from S3.
+F: S1.13: voted for S3.
+C: S3.14: timeout, current votes: [-1, 0, -1, -1]
+C: S3.14timeout,  wins election!
+S3.14: switched to leader mode.
+L: S3.14: switched to leader mode.
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 179
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 210
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 183
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 191
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 268
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 213
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 216
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 223
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 160
+F: S1.14 rejected append from S3.14
+Error parsing /Users/brianjordan/Documents/Duke-Classes/Junior-Spring/CompSci-310/Projects/Project1/compsci310-spring19-group58/p3/bin/../serverlogs/2.config.4: #ELECTION_TIMEOUT_OVERRIDE
+S2.10: Log { (1 1)  (1 2)  (1 3) }
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 243
+F: S1.14 rejected append from S3.14
+S2.10: switched to follower mode.
+F: S2.10: switched to follower mode.
+F: time 247
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 246
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 153
+F: S1.14 rejected append from S3.14
+F: S2.10: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 218
+F: S2.14updated term to 14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 254
+
+F: time 261
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 263F: time 290
+
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 214
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S1.14 rejected append from S3.14
+F: time 196
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 193
+
+F: time 254
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 255F: time 267
+
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 209F: time 150
+
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 265F: time 272
+
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 299
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 216
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 238
+
+F: time 190F: S1.14 rejected append from S3.14
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 255
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S1.14 rejected append from S3.14
+
+F: time 225
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 215
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 271
+F: S2.14 rejected append from S3.14
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 290
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 178F: S1.14 rejected append from S3.14
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 237
+F: time 254
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 198F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 295F: S1.14 rejected append from S3.14
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 229
+F: S1.14 rejected append from S3.14
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 192
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 294
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S1.14 rejected append from S3.14F: time 283
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 242
+
+F: S1.14 rejected append from S3.14F: time 202
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 182
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 273
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 198
+F: S1.14 rejected append from S3.14
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 227
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 190
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 254F: S1.14 rejected append from S3.14
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 173
+
+F: time 186
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 164
+F: time 238
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 290
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 282F: S1.14 rejected append from S3.14
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 292F: time 255
+
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 283
+
+F: time 278
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 161F: time 258
+
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 166F: time 165
+
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 166
+F: time 175
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 222
+F: time 299
+
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 198F: time 261
+
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 224
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 189F: S1.14 rejected append from S3.14
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 220F: time 223
+
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 235
+
+F: time 243F: S1.14 rejected append from S3.14
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 156
+
+F: time 186
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 150
+
+F: time 206F: S1.14 rejected append from S3.14
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 204F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 155
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 223
+
+F: S1.14 rejected append from S3.14F: time 190
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 234
+
+F: time 182
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 172
+F: time 181F: S1.14 rejected append from S3.14
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 242
+
+F: time 271
+F: S2.14 rejected append from S3.14
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 291
+F: time 222
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 272
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 298
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 277
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 236
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 202
+F: time 160
+F: S1.14 rejected append from S3.14F: S2.14 rejected append from S3.14
+
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 239
+
+F: time 278
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 221
+
+F: time 194
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 203
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 221F: S1.14 rejected append from S3.14
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 173
+F: time 274
+F: S1.14 rejected append from S3.14F: S2.14 rejected append from S3.14
+
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 297
+
+F: time 173
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 252
+F: time 212
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 193
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 292
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 276
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 296
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 191
+
+F: time 265
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 243
+
+F: time 200
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 296
+
+F: time 267
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 277
+F: time 181
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 178
+F: time 180
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 238
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S1.14 rejected append from S3.14
+
+F: time 176
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 166
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 264
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 259
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 244F: S1.14 rejected append from S3.14
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 289
+F: time 196
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 210
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 198F: S1.14 rejected append from S3.14
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 162
+
+F: time 205
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 196
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S1.14 rejected append from S3.14F: time 200
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 260F: time 242
+
+F: S2.14 rejected append from S3.14F: S1.14 rejected append from S3.14
+
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 216
+F: time 276
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 253
+
+F: time 244
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 225F: time 253
+
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 240
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 205
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 188
+F: time 180
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 293
+F: time 192
+F: S2.14 rejected append from S3.14
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 168F: time 270
+
+F: S1.14 rejected append from S3.14F: S2.14 rejected append from S3.14
+
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 208
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 241
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 245
+
+F: time 286
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 228
+F: time 270
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 245
+F: time 195
+F: S2.14 rejected append from S3.14
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 230
+F: time 254
+F: S2.14 rejected append from S3.14
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 299
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 272F: S1.14 rejected append from S3.14
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 152
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 297F: S1.14 rejected append from S3.14
+
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 220
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 225
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 178
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S1.14 rejected append from S3.14
+F: time 180
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 161
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 286
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 168
+F: time 259
+F: S2.14 rejected append from S3.14F: S1.14 rejected append from S3.14
+
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 196
+
+F: time 209
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 242
+F: time 203
+F: S2.14 rejected append from S3.14
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 208
+
+F: time 157
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 229F: time 296
+
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 297
+
+F: time 203
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 206
+F: time 161
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 174
+
+F: time 292
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 285
+
+F: time 172
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 224
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 200
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 286F: time 164
+
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 196
+
+F: time 241
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 189
+F: time 245
+F: S2.14 rejected append from S3.14
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 222
+F: time 210
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 278F: time 170
+
+F: S1.14 rejected append from S3.14F: S2.14 rejected append from S3.14
+
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 249
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 165
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 270
+
+F: time 211
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 292F: time 198
+
+F: S2.14 rejected append from S3.14F: S1.14 rejected append from S3.14
+
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 286
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 174
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 259
+F: time 291
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 215F: time 200
+
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 209
+
+F: time 205
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 274F: time 150
+
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 189
+F: time 207
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 251
+
+F: time 279
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 189
+F: time 182
+F: S2.14 rejected append from S3.14
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 189
+F: time 260
+F: S2.14 rejected append from S3.14
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 188
+
+F: time 186
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 193F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 160
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 173F: time 250
+
+F: S2.14 rejected append from S3.14
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 293
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 270
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 185
+
+F: time 196
+F: S2.14 rejected append from S3.14
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 272
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 221
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 215
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 182
+F: S2.14 rejected append from S3.14
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 208
+F: time 265
+F: S2.14 rejected append from S3.14
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+
+F: time 163F: time 238
+
+F: S2.14 rejected append from S3.14F: S1.14 rejected append from S3.14
+
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 183
+
+F: time 273
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 232
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 290
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3F: time 236
+
+F: time 253
+F: S2.14 rejected append from S3.14
+F: S1.14 rejected append from S3.14
+L: S3.14timeout, current entries [1 1, 1 2, 2 3, 2 4]
+L: S3.14timeout, index of last entry3
+L: S3.14timeout, index of last entry3
+F: S1.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 153
+F: S2.14: received  append request from S3.14-PrevLogTerm:2-PrevLogIndex:3
+F: time 287
+F: S1.14 rejected append from S3.14
+F: S2.14 rejected append from S3.14

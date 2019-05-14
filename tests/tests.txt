@@ -1,0 +1,7 @@
+# You must set this variable to the number of servers in your test case
+NUM_SERVERS=3
+
+# Test assumes the following .config values for ELECTION_TIMEOUT_OVERRIDE: 
+# S1 (1200), S2 (600), S3 (300)
+
+start_servers $NUM_SERVERS

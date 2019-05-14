@@ -1,0 +1,63 @@
+To compile:
+
+$> cd p3
+$> make
+
+You can test your implementation by using the runtest.sh script in the bin directory. 
+
+An example 10-second simulation run from from the directory raft/src/edu/duke/raft using tests/sampletest.txt:
+
+bin/runtest.sh 10 tests/sampletest.txt 2> /dev/null
+
+
+To test:
+
+bin/runtest_osx.sh 10 tests/sampletest.txt
+
+To watch the tests:
+
+tail -f serverlogs/server.output
+
+
+Modify the following config files to try different test cases. Here is an
+example that corresponds to sampletest.
+
+Initial log for server 1: 1.init.log
+1 1
+1 2
+
+Initial log for server 2: 2.init.log
+1 1
+1 2
+
+Initial log for server 3: 3.init.log
+1 1
+1 2
+2 3
+2 4
+
+Initial config for server 1: 1.init.config
+CURRENT_TERM=1
+VOTED_FOR=1 # This is by default
+ELECTION_TIMEOUT_OVERRIDE=1200
+
+Initial config for server 2: 2.init.config
+CURRENT_TERM=1
+VOTED_FOR=1 # This is by default
+ELECTION_TIMEOUT_OVERRIDE=600
+
+Initial config for server 3: 3.init.config
+CURRENT_TERM=3 # Note this matches the log file.
+VOTED_FOR=1 # This is by default
+ELECTION_TIMEOUT_OVERRIDE=300
+
+Hence, server 3 should be set with the most log entries and the highest term.
+
+In theory, this should end up being the server that's elected the leader.
+All other servers should therefore eventually sync with that server, particularly
+since no new responses ever enter this system.
+
+
+To see the test output, uncomment the body of `testPrint`.
+
+Make sure that you comment out the body of `testPrint` before submitting!
